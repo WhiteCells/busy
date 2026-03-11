@@ -27,8 +27,8 @@ fi
 # lookbusy
 MemTotal=$(awk '($1 == "MemTotal:"){printf "%d\n",$2/1024}' /proc/meminfo) # total memory
 MemUsage=$(($MemTotal / 100 * $MEM_UTIL))
-# lookbusy -c $CPU_UTIL -n $CPU_CORE -m ${MemUsage}MB -r curve
-lookbusy -c $CPU_UTIL -m ${MemUsage}MB -r curve
+# lb -c $CPU_UTIL -n $CPU_CORE -m ${MemUsage}MB -r curve
+lb -c $CPU_UTIL -m ${MemUsage}MB -r curve
 
 # if [ $CPU_CORE ]; then
 #     if [ $MEM_UTIL ]; then

@@ -18,6 +18,7 @@ RUN apt-get update \
     && ./configure \
     && make \
     && make install \
+    && mv /usr/local/bin/lookbusy /usr/local/bin/lb \
     && cd /app \
     && rm -rf lookbusy \
     && chmod +x /app/*.sh \
