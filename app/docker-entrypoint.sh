@@ -10,13 +10,14 @@ NETTEST_TIMER_RAW=${NETTEST_TIMER:-60}
 CPU_UTIL="${CPU_UTIL:-50}"
 MEM_UTIL="${MEM_UTIL:-50}"
 SCRIPT_PATH="${SCRIPT_PATH:-/app/st.sh}"
+LOG_FILE="${LOG_FILE:-/app/st.log}"
 
 ########################################
 # Log function
 ########################################
 
 log(){
-    echo "[$(date '+%Y-%m-%d %H:%M:%S')] $1"
+    echo "[$(date '+%Y-%m-%d %H:%M:%S')] $1" | tee -a "$LOG_FILE"
 }
 
 ########################################

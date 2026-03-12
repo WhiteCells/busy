@@ -1,3 +1,3 @@
 #!/bin/bash
 pkill speedtest
-speedtest --single
+speedtest --single --simple
