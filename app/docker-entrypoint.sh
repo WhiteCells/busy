@@ -67,7 +67,7 @@ run_speedtest(){
 
     log "Speedtest started"
 
-    RESULT=$(speedtest --single 2>&1)
+    RESULT=$($SCRIPT_PATH 2>&1)
 
     log "$RESULT"
 
